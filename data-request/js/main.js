@@ -1,10 +1,10 @@
 // Create application
-var dataApp = angular.module('dataApp', []);
+var myApp = angular.module('myApp', [])
 
-// Bind controller customersCtrl
-dataApp.controller('customersCtrl', function($scope, $http) {
-    $http.get('http://www.w3schools.com/angular/customers.php').then(function successCallback(response) {
-        $scope.names = request.data.records;
-        console.log(request.data);
-    })
+// Bind controller myCtrl
+myApp.controller('customersCtrl', function($scope, $http){
+	$http.get('http://www.w3schools.com/angular/customers.php').then(function(request) {
+		$scope.names = request.data.records
+		console.log(request.data)
+	})
 })
